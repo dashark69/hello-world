@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+	float a,b,c,m,n,d;
+	printf("在此输入一元二次方程的系数\n");
+	scanf("%f %f %f %f %f %f",&a,&b,&c,&m,&n,&d);
+	float x,y;
+	x=(n*c-b*d)/(n*a-m*b);
+	y=(m*c-a*d)/(m*b-n*a);
+	printf("方程的解为\nX=%f,Y=%f",x,y);
+	return 0;
+ } 

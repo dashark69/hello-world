@@ -1,0 +1,28 @@
+#include<iostream> 
+using namespace std;
+
+int haha[] = {1, 2, 4, 3}; 
+int hehe[] = {1, 1, 2, 6, 4};
+
+int func(int a)
+{
+	if(a<5)
+		return hehe[a];
+	int m=a%5;
+	int n=a/5;
+	return haha[n%4]*func(m)%5*func(n)%5;
+}
+int main()
+{
+	int n,x;
+	cin>>n;
+	for(int i=0;i<n;i++)
+	{
+		cin>>x;
+		int result=func(x);
+		if(result&1)
+			result=(result+5)%10;
+		cout<<result<<endl;
+	}
+	return 0; 
+}
